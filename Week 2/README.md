@@ -381,11 +381,6 @@ Counters increment or decrement their stored value on each clock cycle.
 
 ---
 
-### Diagram
-*(Insert diagram here)*
-
----
-
 ### Intuition and Relevance
 Counters are used for:
 - Timing
