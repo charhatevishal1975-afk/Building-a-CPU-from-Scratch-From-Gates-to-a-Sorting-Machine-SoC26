@@ -1,0 +1,162 @@
+$date
+	Mon Jun 15 11:55:32 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_alu $end
+$var wire 1 ! zero $end
+$var wire 8 " result [7:0] $end
+$var wire 1 # overflow $end
+$var wire 1 $ carry $end
+$var reg 8 % a [7:0] $end
+$var reg 8 & b [7:0] $end
+$var reg 3 ' op [2:0] $end
+$var integer 32 ( fail [31:0] $end
+$scope module uut $end
+$var wire 8 ) a [7:0] $end
+$var wire 8 * b [7:0] $end
+$var wire 3 + op [2:0] $end
+$var wire 1 ! zero $end
+$var reg 1 $ carry $end
+$var reg 1 # overflow $end
+$var reg 8 , result [7:0] $end
+$upscope $end
+$scope task check_result $end
+$var reg 1 - exp_carry $end
+$var reg 8 . exp_result [7:0] $end
+$var reg 1 / exp_zero $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x/
+bx .
+x-
+b11110 ,
+b0 +
+b10100 *
+b1010 )
+b0 (
+b0 '
+b10100 &
+b1010 %
+0$
+0#
+b11110 "
+0!
+$end
+#10
+1!
+b0 "
+b0 ,
+b0 &
+b0 *
+b0 %
+b0 )
+0-
+0/
+b11110 .
+#20
+1$
+b1 &
+b1 *
+b11111111 %
+b11111111 )
+1/
+b0 .
+#30
+0$
+0!
+b10100 "
+b10100 ,
+b1010 &
+b1010 *
+b11110 %
+b11110 )
+b1 '
+b1 +
+1-
+#40
+1!
+b0 "
+b0 ,
+b1010 %
+b1010 )
+0-
+0/
+b10100 .
+#50
+0!
+b1111 "
+b1111 ,
+b1111 &
+b1111 *
+b11111111 %
+b11111111 )
+b10 '
+b10 +
+1/
+b0 .
+#60
+b11111111 "
+b11111111 ,
+b11110000 %
+b11110000 )
+b11 '
+b11 +
+0/
+b1111 .
+#70
+1!
+b0 "
+b0 ,
+b11111111 &
+b11111111 *
+b11111111 %
+b11111111 )
+b100 '
+b100 +
+b11111111 .
+#80
+0!
+b10 "
+b10 ,
+b0 &
+b0 *
+b1 %
+b1 )
+b101 '
+b101 +
+1/
+b0 .
+#90
+1$
+1!
+b0 "
+b0 ,
+b10000000 %
+b10000000 )
+0/
+b10 .
+#100
+0$
+0!
+b1000000 "
+b1000000 ,
+b110 '
+b110 +
+1-
+1/
+b0 .
+#110
+0-
+0/
+b1000000 .

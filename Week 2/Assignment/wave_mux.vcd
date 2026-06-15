@@ -1,0 +1,106 @@
+$date
+	Mon Jun 15 11:08:31 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_mux $end
+$var wire 8 ! y4 [7:0] $end
+$var wire 8 " y2 [7:0] $end
+$var reg 8 # a [7:0] $end
+$var reg 8 $ b [7:0] $end
+$var reg 8 % d0 [7:0] $end
+$var reg 8 & d1 [7:0] $end
+$var reg 8 ' d2 [7:0] $end
+$var reg 8 ( d3 [7:0] $end
+$var reg 1 ) sel $end
+$var reg 2 * sel4 [1:0] $end
+$var integer 32 + fail [31:0] $end
+$scope module m2 $end
+$var wire 8 , a [7:0] $end
+$var wire 8 - b [7:0] $end
+$var wire 1 ) sel $end
+$var wire 8 . y [7:0] $end
+$var parameter 32 / WIDTH $end
+$upscope $end
+$scope module m4 $end
+$var wire 8 0 d0 [7:0] $end
+$var wire 8 1 d1 [7:0] $end
+$var wire 8 2 d2 [7:0] $end
+$var wire 8 3 d3 [7:0] $end
+$var wire 2 4 sel [1:0] $end
+$var wire 8 5 y [7:0] $end
+$var parameter 32 6 WIDTH $end
+$var reg 8 7 x [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 6
+b1000 /
+$end
+#0
+$dumpvars
+bx 7
+bx 5
+bx 4
+bx 3
+bx 2
+bx 1
+bx 0
+b10101010 .
+b1010101 -
+b10101010 ,
+b0 +
+bx *
+0)
+bx (
+bx '
+bx &
+bx %
+b1010101 $
+b10101010 #
+b10101010 "
+bx !
+$end
+#10
+b1010101 "
+b1010101 .
+1)
+#20
+b10001 !
+b10001 5
+b10001 7
+b0 *
+b0 4
+b1000100 (
+b1000100 3
+b110011 '
+b110011 2
+b100010 &
+b100010 1
+b10001 %
+b10001 0
+#30
+b100010 !
+b100010 5
+b100010 7
+b1 *
+b1 4
+#40
+b110011 !
+b110011 5
+b110011 7
+b10 *
+b10 4
+#50
+b1000100 !
+b1000100 5
+b1000100 7
+b11 *
+b11 4
+#60
