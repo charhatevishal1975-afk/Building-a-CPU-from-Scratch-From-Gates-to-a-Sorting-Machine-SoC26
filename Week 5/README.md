@@ -16,6 +16,8 @@ Design and implement a simplified CPU capable of executing a bubble sort algorit
 
 Refer to the i281 slides in the resources folder.
 
+Also read sections 5.1 - 5.4 in david_patterson.pdf text.
+
 ---
 
 ## Submission Guidelines
