@@ -18,6 +18,8 @@ Refer to the i281 slides in the resources folder.
 
 Also read sections 5.1 - 5.4 in david_patterson.pdf text.
 
+i281 Simulator - https://www.ece.iastate.edu/~alexs/classes/i281_simulator/index.html
+
 ---
 
 ## Submission Guidelines
