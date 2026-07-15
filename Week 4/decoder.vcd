@@ -1,0 +1,436 @@
+$date
+	Wed Jul 15 11:37:59 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module decoder_tb $end
+$var wire 1 ! SUBI $end
+$var wire 1 " SUB $end
+$var wire 1 # STOREF $end
+$var wire 1 $ STORE $end
+$var wire 1 % SHIFTR $end
+$var wire 1 & SHIFTL $end
+$var wire 1 ' NOOP $end
+$var wire 1 ( MOVE $end
+$var wire 1 ) LOADI_LOADP $end
+$var wire 1 * LOADF $end
+$var wire 1 + LOAD $end
+$var wire 1 , JUMP $end
+$var wire 1 - INPUTDF $end
+$var wire 1 . INPUTD $end
+$var wire 1 / INPUTCF $end
+$var wire 1 0 INPUTC $end
+$var wire 1 1 CMP $end
+$var wire 1 2 BRNE_BRNZ $end
+$var wire 1 3 BRGE $end
+$var wire 1 4 BRG $end
+$var wire 1 5 BRE_BRZ $end
+$var wire 1 6 ADDI $end
+$var wire 1 7 ADD $end
+$var reg 16 8 instruction [15:0] $end
+$scope module DUT $end
+$var wire 16 9 instruction [15:0] $end
+$var wire 1 : y1_unused $end
+$var wire 1 ; y15_enable $end
+$var wire 1 < y12_enable $end
+$var wire 1 ! SUBI $end
+$var wire 1 " SUB $end
+$var wire 1 # STOREF $end
+$var wire 1 $ STORE $end
+$var wire 1 % SHIFTR $end
+$var wire 1 & SHIFTL $end
+$var wire 1 ' NOOP $end
+$var wire 1 ( MOVE $end
+$var wire 1 ) LOADI_LOADP $end
+$var wire 1 * LOADF $end
+$var wire 1 + LOAD $end
+$var wire 1 , JUMP $end
+$var wire 1 - INPUTDF $end
+$var wire 1 . INPUTD $end
+$var wire 1 / INPUTCF $end
+$var wire 1 0 INPUTC $end
+$var wire 1 1 CMP $end
+$var wire 1 2 BRNE_BRNZ $end
+$var wire 1 3 BRGE $end
+$var wire 1 4 BRG $end
+$var wire 1 5 BRE_BRZ $end
+$var wire 1 6 ADDI $end
+$var wire 1 7 ADD $end
+$scope module branch_decoder $end
+$var wire 1 = w0 $end
+$var wire 1 > w1 $end
+$var wire 1 5 y0 $end
+$var wire 1 2 y1 $end
+$var wire 1 4 y2 $end
+$var wire 1 3 y3 $end
+$var wire 1 ; En $end
+$upscope $end
+$scope module main_decoder $end
+$var wire 1 ? En $end
+$var wire 1 @ w0 $end
+$var wire 1 A w1 $end
+$var wire 1 B w2 $end
+$var wire 1 C w3 $end
+$var wire 1 * y9 $end
+$var wire 1 + y8 $end
+$var wire 1 ! y7 $end
+$var wire 1 " y6 $end
+$var wire 1 6 y5 $end
+$var wire 1 7 y4 $end
+$var wire 1 ) y3 $end
+$var wire 1 ( y2 $end
+$var wire 1 ; y15 $end
+$var wire 1 , y14 $end
+$var wire 1 1 y13 $end
+$var wire 1 < y12 $end
+$var wire 1 # y11 $end
+$var wire 1 $ y10 $end
+$var wire 1 : y1 $end
+$var wire 1 ' y0 $end
+$var wire 1 D en3 $end
+$var wire 1 E en2 $end
+$var wire 1 F en1 $end
+$var wire 1 G en0 $end
+$scope module lower_decoder0 $end
+$var wire 1 @ w0 $end
+$var wire 1 A w1 $end
+$var wire 1 ' y0 $end
+$var wire 1 : y1 $end
+$var wire 1 ( y2 $end
+$var wire 1 ) y3 $end
+$var wire 1 G En $end
+$upscope $end
+$scope module lower_decoder1 $end
+$var wire 1 @ w0 $end
+$var wire 1 A w1 $end
+$var wire 1 7 y0 $end
+$var wire 1 6 y1 $end
+$var wire 1 " y2 $end
+$var wire 1 ! y3 $end
+$var wire 1 F En $end
+$upscope $end
+$scope module lower_decoder2 $end
+$var wire 1 @ w0 $end
+$var wire 1 A w1 $end
+$var wire 1 + y0 $end
+$var wire 1 * y1 $end
+$var wire 1 $ y2 $end
+$var wire 1 # y3 $end
+$var wire 1 E En $end
+$upscope $end
+$scope module lower_decoder3 $end
+$var wire 1 @ w0 $end
+$var wire 1 A w1 $end
+$var wire 1 < y0 $end
+$var wire 1 1 y1 $end
+$var wire 1 , y2 $end
+$var wire 1 ; y3 $end
+$var wire 1 D En $end
+$upscope $end
+$scope module upper_decoder $end
+$var wire 1 ? En $end
+$var wire 1 B w0 $end
+$var wire 1 C w1 $end
+$var wire 1 G y0 $end
+$var wire 1 F y1 $end
+$var wire 1 E y2 $end
+$var wire 1 D y3 $end
+$upscope $end
+$upscope $end
+$scope module move_decoder $end
+$var wire 1 : En $end
+$var wire 1 H w0 $end
+$var wire 1 I w1 $end
+$var wire 1 0 y0 $end
+$var wire 1 / y1 $end
+$var wire 1 . y2 $end
+$var wire 1 - y3 $end
+$upscope $end
+$scope module shift_decoder $end
+$var wire 1 < En $end
+$var wire 1 J w0 $end
+$var wire 1 & y0 $end
+$var wire 1 % y1 $end
+$upscope $end
+$upscope $end
+$scope task check $end
+$var reg 1 K actual $end
+$var reg 1 L expected $end
+$var reg 128 M name [127:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx M
+xL
+xK
+0J
+0I
+0H
+1G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+1?
+0>
+0=
+0<
+0;
+0:
+b0 9
+b0 8
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+1'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10000
+0'
+1(
+1A
+b10000000000000 8
+b10000000000000 9
+b1001110010011110100111101010000 M
+1K
+1L
+#20000
+0(
+1)
+1@
+b11000000000000 8
+b11000000000000 9
+b1001101010011110101011001000101 M
+#30000
+17
+0G
+0)
+1F
+0@
+0A
+1B
+b100000000000000 8
+b100000000000000 9
+b100110001001111010000010100010001001001010111110100110001001111010000010100010001010000 M
+#40000
+07
+16
+1@
+b101000000000000 8
+b101000000000000 9
+b10000010100010001000100 M
+#50000
+1"
+06
+0@
+1A
+b110000000000000 8
+b110000000000000 9
+b1000001010001000100010001001001 M
+#60000
+0"
+1!
+1@
+b111000000000000 8
+b111000000000000 9
+b10100110101010101000010 M
+#70000
+1+
+1E
+0!
+0F
+0@
+0A
+0B
+1C
+b1000000000000000 8
+b1000000000000000 9
+b1010011010101010100001001001001 M
+#80000
+0+
+1*
+1@
+b1001000000000000 8
+b1001000000000000 9
+b1001100010011110100000101000100 M
+#90000
+1$
+0*
+0@
+1A
+b1010000000000000 8
+b1010000000000000 9
+b100110001001111010000010100010001000110 M
+#100000
+0$
+1#
+1@
+b1011000000000000 8
+b1011000000000000 9
+b101001101010100010011110101001001000101 M
+#110000
+11
+0#
+0E
+1D
+0A
+1B
+b1101000000000000 8
+b1101000000000000 9
+b10100110101010001001111010100100100010101000110 M
+#120000
+1,
+01
+0@
+1A
+b1110000000000000 8
+b1110000000000000 9
+b10000110100110101010000 M
+#130000
+10
+1:
+0,
+1G
+0D
+1@
+0A
+0B
+0C
+b1000000000000 8
+b1000000000000 9
+b1001010010101010100110101010000 M
+#140000
+00
+1/
+1H
+1J
+1=
+b1000100000000 8
+b1000100000000 9
+b10010010100111001010000010101010101010001000011 M
+#150000
+1.
+0/
+0H
+1I
+0J
+0=
+1>
+b1001000000000 8
+b1001000000000 9
+b1001001010011100101000001010101010101000100001101000110 M
+#160000
+0.
+1-
+1H
+1J
+1=
+b1001100000000 8
+b1001100000000 9
+b10010010100111001010000010101010101010001000100 M
+#170000
+1&
+0'
+07
+1<
+0G
+0:
+0F
+1D
+0-
+0@
+1B
+1C
+0H
+0I
+0J
+0=
+0>
+b1100000000000000 8
+b1100000000000000 9
+b1001001010011100101000001010101010101000100010001000110 M
+#180000
+0&
+1%
+1H
+1J
+1=
+b1100000100000000 8
+b1100000100000000 9
+b10100110100100001001001010001100101010001001100 M
+#190000
+15
+0<
+0&
+01
+1;
+0%
+1@
+1A
+0H
+0J
+0=
+b1111000000000000 8
+b1111000000000000 9
+b10100110100100001001001010001100101010001010010 M
+#200000
+05
+12
+1H
+1J
+1=
+b1111000100000000 8
+b1111000100000000 9
+b1000010010100100100010101011111010000100101001001011010 M
+#210000
+14
+02
+0H
+1I
+0J
+0=
+1>
+b1111001000000000 8
+b1111001000000000 9
+b10000100101001001001110010001010101111101000010010100100100111001011010 M
+#220000
+04
+13
+1H
+1J
+1=
+b1111001100000000 8
+b1111001100000000 9
+b10000100101001001000111 M
+#230000
+b1000010010100100100011101000101 M
