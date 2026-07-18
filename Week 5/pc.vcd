@@ -1,0 +1,82 @@
+$date
+	Wed Jul 15 17:09:34 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_pc $end
+$var wire 8 ! pc [7:0] $end
+$var reg 1 " clk $end
+$var reg 8 # pc_next [7:0] $end
+$var reg 1 $ pc_write $end
+$var reg 1 % reset $end
+$var integer 32 & failed [31:0] $end
+$var integer 32 ' passed [31:0] $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 8 ( pc_next [7:0] $end
+$var wire 1 $ pc_write $end
+$var wire 1 % reset $end
+$var reg 8 ) pc [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 )
+b0 (
+b0 '
+b0 &
+1%
+0$
+b0 #
+0"
+b0 !
+$end
+#5000
+1"
+#10000
+0"
+b1111 #
+b1111 (
+1$
+b1 '
+0%
+#15000
+b1111 !
+b1111 )
+1"
+#20000
+0"
+b1100100 #
+b1100100 (
+b10 '
+#25000
+b1100100 !
+b1100100 )
+1"
+#30000
+0"
+b11001000 #
+b11001000 (
+0$
+b11 '
+#35000
+1"
+#40000
+0"
+b100 '
+#45000
+1"
+#50000
+0"
+#55000
+1"
+#60000
+0"

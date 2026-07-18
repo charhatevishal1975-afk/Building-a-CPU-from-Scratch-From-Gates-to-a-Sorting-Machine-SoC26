@@ -1,0 +1,129 @@
+$date
+	Wed Jul 15 17:02:35 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_alu $end
+$var wire 1 ! zero $end
+$var wire 8 " result [7:0] $end
+$var wire 1 # negative $end
+$var wire 1 $ carry $end
+$var reg 8 % A [7:0] $end
+$var reg 8 & B [7:0] $end
+$var reg 3 ' alu_op [2:0] $end
+$var integer 32 ( failed [31:0] $end
+$var integer 32 ) passed [31:0] $end
+$scope module uut $end
+$var wire 8 * A [7:0] $end
+$var wire 8 + B [7:0] $end
+$var wire 3 , alu_op [2:0] $end
+$var reg 1 $ carry $end
+$var reg 1 # negative $end
+$var reg 8 - result [7:0] $end
+$var reg 9 . temp [8:0] $end
+$var reg 1 ! zero $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11110 .
+b11110 -
+b0 ,
+b1010 +
+b10100 *
+b0 )
+b0 (
+b0 '
+b1010 &
+b10100 %
+0$
+0#
+b11110 "
+0!
+$end
+#5000
+1!
+1$
+b100000000 .
+b0 "
+b0 -
+b1 &
+b1 +
+b11111111 %
+b11111111 *
+b1 )
+#10000
+b11110 "
+b11110 -
+0$
+0!
+b11110 .
+b1 '
+b1 ,
+b10100 &
+b10100 +
+b110010 %
+b110010 *
+b10 )
+#15000
+1!
+b0 .
+b0 "
+b0 -
+b10 '
+b10 ,
+b11001 &
+b11001 +
+b11001 %
+b11001 *
+b11 )
+#20000
+b11110 "
+b11110 -
+0!
+b11 '
+b11 ,
+b0 &
+b0 +
+b1111 %
+b1111 *
+b100 )
+#25000
+b111 "
+b111 -
+b100 '
+b100 ,
+b1110 %
+b1110 *
+b101 )
+#30000
+b1100011 "
+b1100011 -
+b101 '
+b101 ,
+b1111 &
+b1111 +
+b1100011 %
+b1100011 *
+b110 )
+#35000
+b101100 "
+b101100 -
+b110 '
+b110 ,
+b101100 &
+b101100 +
+b1100 %
+b1100 *
+b111 )
+#40000
+b1000 )
+#50000

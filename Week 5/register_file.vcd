@@ -1,0 +1,158 @@
+$date
+	Wed Jul 15 16:54:58 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_register_file $end
+$var wire 8 ! regD [7:0] $end
+$var wire 8 " regC [7:0] $end
+$var wire 8 # regB [7:0] $end
+$var wire 8 $ regA [7:0] $end
+$var wire 8 % read_data2 [7:0] $end
+$var wire 8 & read_data1 [7:0] $end
+$var reg 1 ' clk $end
+$var reg 2 ( read_sel1 [1:0] $end
+$var reg 2 ) read_sel2 [1:0] $end
+$var reg 1 * reg_write $end
+$var reg 1 + reset $end
+$var reg 8 , write_data [7:0] $end
+$var reg 2 - write_sel [1:0] $end
+$scope module uut $end
+$var wire 1 ' clk $end
+$var wire 2 . read_sel1 [1:0] $end
+$var wire 2 / read_sel2 [1:0] $end
+$var wire 8 0 regA [7:0] $end
+$var wire 8 1 regB [7:0] $end
+$var wire 8 2 regC [7:0] $end
+$var wire 8 3 regD [7:0] $end
+$var wire 1 * reg_write $end
+$var wire 1 + reset $end
+$var wire 8 4 write_data [7:0] $end
+$var wire 2 5 write_sel [1:0] $end
+$var wire 8 6 read_data2 [7:0] $end
+$var wire 8 7 read_data1 [7:0] $end
+$var reg 8 8 A [7:0] $end
+$var reg 8 9 B [7:0] $end
+$var reg 8 : C [7:0] $end
+$var reg 8 ; D [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 ;
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b0 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+1+
+0*
+b0 )
+b0 (
+0'
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#5000
+1'
+#10000
+0'
+b11001 ,
+b11001 4
+1*
+0+
+#15000
+b11001 &
+b11001 7
+b11001 %
+b11001 6
+b11001 $
+b11001 0
+b11001 8
+1'
+#20000
+0'
+b101000 ,
+b101000 4
+b1 -
+b1 5
+#25000
+b101000 #
+b101000 1
+b101000 9
+1'
+#30000
+0'
+b1001011 ,
+b1001011 4
+b10 -
+b10 5
+#35000
+b1001011 "
+b1001011 2
+b1001011 :
+1'
+#40000
+0'
+b1100100 ,
+b1100100 4
+b11 -
+b11 5
+#45000
+b1100100 !
+b1100100 3
+b1100100 ;
+1'
+#50000
+b101000 %
+b101000 6
+0'
+b1 )
+b1 /
+0*
+#55000
+1'
+#60000
+b1100100 %
+b1100100 6
+b1001011 &
+b1001011 7
+0'
+b11 )
+b11 /
+b10 (
+b10 .
+#65000
+1'
+#70000
+b101000 &
+b101000 7
+0'
+b1 (
+b1 .
+#75000
+1'
+#80000
+0'

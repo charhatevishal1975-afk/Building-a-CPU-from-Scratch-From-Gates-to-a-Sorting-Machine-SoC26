@@ -1,0 +1,47 @@
+$date
+	Wed Jul 15 17:17:58 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_code_memory $end
+$var wire 16 ! instruction [15:0] $end
+$var reg 8 " address [7:0] $end
+$var integer 32 # failed [31:0] $end
+$var integer 32 $ passed [31:0] $end
+$scope module uut $end
+$var wire 8 % address [7:0] $end
+$var wire 16 & instruction [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11000100100101 &
+b0 %
+b0 $
+b0 #
+b0 "
+b11000100100101 !
+$end
+#5000
+b100000100100100 !
+b100000100100100 &
+b1 "
+b1 %
+b1 $
+#10000
+b1000101000000001 !
+b1000101000000001 &
+b10 "
+b10 %
+b10 $
+#15000
+b11 $
+#35000
