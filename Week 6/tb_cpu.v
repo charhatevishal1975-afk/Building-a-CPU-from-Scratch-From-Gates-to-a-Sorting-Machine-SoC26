@@ -41,7 +41,7 @@ module tb_cpu;
         reset = 0;
 
         // Run for a few instructions
-        #50000;
+        #500;
 
         $display("--------------------------------");
         $display("CPU Test Finished");
@@ -75,7 +75,9 @@ module tb_cpu;
     // Monitor CPU State
     //----------------------------------------
 
-    always @(posedge clk) begin
+    
+
+    
 
         // $display("\n=================================================");
 
@@ -143,6 +145,6 @@ module tb_cpu;
         //  uut.STOREF);
 
 
-    end
+    // end
 
 endmodule

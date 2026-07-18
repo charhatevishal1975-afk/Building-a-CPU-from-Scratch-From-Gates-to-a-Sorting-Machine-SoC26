@@ -75,20 +75,31 @@ module tb_cpu;
     // Monitor CPU State
     //----------------------------------------
 
+    reg tmp;
+    initial begin
+        tmp<= 0;
+    end
     always @(posedge clk) begin
 
-        // $display("\n=================================================");
+        if(!uut.instruction)
+            tmp <= 1;
 
-        // $display("PC          : %0d", uut.pc);
-        // $display("Instruction : %h", uut.instruction);
 
-        // $display("");
+        
+        if (!tmp) begin
 
-        // $display("Registers");
-        // $display("A = %0d", uut.regA);
-        // $display("B = %0d", uut.regB);
-        // $display("C = %0d", uut.regC);
-        // $display("D = %0d", uut.regD);
+        $display("\n=================================================");
+
+        $display("PC          : %0d", uut.pc);
+        $display("Instruction : %h", uut.instruction);
+
+        $display("");
+
+        $display("Registers");
+        $display("A = %0d", uut.regA);
+        $display("B = %0d", uut.regB);
+        $display("C = %0d", uut.regC);
+        $display("D = %0d", uut.regD);
 
         // $display("");
 
@@ -97,11 +108,11 @@ module tb_cpu;
 
         // $display("");
 
-        // $display("Flags");
-        // $display("Z=%b C=%b N=%b",
-        //          uut.zero_flag,
-        //          uut.carry_flag,
-        //          uut.negative_flag);
+        $display("Flags");
+        $display("Zero=%b Carry=%b Negative=%b",
+                 uut.zero_flag,
+                 uut.carry_flag,
+                 uut.negative_flag);
         // $display("Instruction : %h", uut.instruction);                 
         // $display("reg_write  = %b", uut.reg_write);
         // $display("write_sel  = %0d", uut.write_sel);
@@ -142,7 +153,7 @@ module tb_cpu;
         //  uut.STORE,
         //  uut.STOREF);
 
-
+        end
     end
 
 endmodule

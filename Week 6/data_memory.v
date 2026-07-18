@@ -59,10 +59,7 @@ end
     end
 
 //temp check
-// always @(posedge clk) begin
-//     if(mem_write)
-//         $display("WRITE addr=%0d data=%0d", address, write_data);
-// end
+
 
 // always @(*) begin
 //     $display("READ addr=%0d data=%0d", address, read_data);

@@ -349,9 +349,9 @@ assign branch_taken =
 
         (BRNE_BRNZ   && !zero_flag) ||
 
-        (BRG         && !zero_flag && !negative_flag) ||
+        (BRG  && !zero_flag && !carry_flag) ||
 
-        (BRGE        && !negative_flag);  
+            (BRGE && !carry_flag);
 
 
 // always @(*) begin

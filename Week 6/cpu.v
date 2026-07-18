@@ -21,6 +21,7 @@ wire [7:0] next_pc;
 // Instruction
 //--------------------------------------------------
 
+wire [15:0] instruction_from_mem;
 wire [15:0] instruction;
 
 //--------------------------------------------------
@@ -148,7 +149,7 @@ code_memory CODE(
 
     .address(pc),
 
-    .instruction(instruction)
+    .instruction(instruction_from_mem)
 
 );
 
@@ -327,6 +328,8 @@ control_unit control (
 .flag_write(flag_write)
 
 );
+
+
 assign reg_write_data =
     LOADI_LOADP ? immediate :
     INPUTC      ? input_c :
@@ -353,113 +356,18 @@ assign branch_taken =
 
             (BRGE && !carry_flag);
 
+always @(posedge clk) begin
+        if(mem_write)
+        begin
+            $display(
+                "WRITE addr=%0d data=%0d rs1=%0d",
+                (LOADF || STOREF)
+        ? effective_address
+        : instruction[7:0],
+                reg_data1,
+                rf_read_sel1
+            );
+        end
+    end            
 
-// always @(*) begin
-//     $display("rf_read_sel1=%0d rf_read_sel2=%0d", rf_read_sel1, rf_read_sel2);
-//     $display("read_sel1=%0d read_sel2=%0d", read_sel1, read_sel2);
-//     $display("LOADF=%b", LOADF);
-//     $display("memory_data=%h", memory_data);
-//     $display("reg_write_data=%h", reg_write_data);
-//     $display("write_sel=%0d", write_sel);
-//      $display("address=%d memory_data=%d", effective_address, memory_data);
-// $display("Z=%b", zero_flag);
-
-//         $display("branch=%b", branch);
-
-//         $display("branch_taken=%b", branch_taken);
-
-//         $display("next_pc=%d", next_pc);
-// end
-
-
-// //--------------------------------------------------
-// // Temporary Control Logic
-// //--------------------------------------------------
-
-// //--------------------------------------------------
-// // ALU Control
-// //--------------------------------------------------
-
-// always @(*) begin
-
-//     alu_op = `ALU_PASS_A;
-
-//     if (ADD)
-//         alu_op = `ALU_ADD;
-
-//     else if (SUB)
-//         alu_op = `ALU_SUB;
-
-//     else if (CMP)
-//         alu_op = `ALU_CMP;
-
-//     else if (SHIFTL)
-//         alu_op = `ALU_SHIFTL;
-
-//     else if (SHIFTR)
-//         alu_op = `ALU_SHIFTR;
-
-// end
-
-// //--------------------------------------------------
-// // Register Control
-// //--------------------------------------------------
-
-// always @(*) begin
-
-//     reg_write = 0;
-
-//     if (LOADI_LOADP)
-//         reg_write = 1;
-
-//     else if (ADD)
-//         reg_write = 1;
-
-//     else if (SUB)
-//         reg_write = 1;
-
-//     else if (LOAD)
-//         reg_write = 1;
-
-// end 
-
-// //--------------------------------------------------
-// // Flag Control
-// //--------------------------------------------------
-
-// always @(*) begin
-
-//     flag_write = 0;
-
-//     if (ADD || SUB || CMP)
-//         flag_write = 1;
-
-// end
-// //--------------------------------------------------
-// // Memory Control
-// //--------------------------------------------------
-
-// always @(*) begin
-
-//     mem_write = STORE;
-
-// end
-
-// // always @(*) begin
-
-// //     //----------------------------------
-// //     // Safe Defaults
-// //     //----------------------------------
-// //     mem_write  = 0;
-// //     flag_write = 0;
-// //     write_sel  = instruction[11:10];
-// //     read_sel1  = instruction[9:8];
-// //     read_sel2  = instruction[7:6];
-
-// // end
-
-
-// //--------------------------------------------------
-// // Write Back MUX
-// //--------------------------------------------------
 endmodule
