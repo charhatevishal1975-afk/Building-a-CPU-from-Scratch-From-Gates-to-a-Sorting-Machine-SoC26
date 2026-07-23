@@ -59,6 +59,10 @@ always @(*) begin
     begin
         read_sel1 = instruction[11:10];
     end
+    else if (STORE) begin
+        read_sel1 = instruction[11:10]; // source register
+        read_sel2 = instruction[11:10]; // same register into B_reg
+    end
     else
     begin
         read_sel1 = instruction[9:8];

@@ -30,6 +30,13 @@ module alu(
         carry    = 1'b0;
         negative = 1'b0;
 
+        // $display(
+        //     "ALU DEBUG A=%0d B=%0d op=%0d",
+        //     A,
+        //     B,
+        //     alu_op
+        // );
+
         case(alu_op)
 
             //------------------------------------------------

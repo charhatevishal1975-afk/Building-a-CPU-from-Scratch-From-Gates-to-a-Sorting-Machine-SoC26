@@ -16,4 +16,11 @@ begin
         q <= d;
 end
 
+// always @(posedge clk)
+// begin
+//     if(enable)
+//         $display("PIPE REG enable=%b d=%h q(old)=%h", enable, d, q);
+// end
+
+
 endmodule

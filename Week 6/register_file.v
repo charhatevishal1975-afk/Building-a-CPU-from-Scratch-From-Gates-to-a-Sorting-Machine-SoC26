@@ -94,4 +94,31 @@ module register_file(
     assign regB = B;
     assign regC = C;
     assign regD = D;
+
+// always @(posedge clk)
+// begin
+//     if(reg_write)
+//         $display(
+//             "WRITE R%0d <= %0d",
+//             write_sel,
+//             write_data
+//         );
+// end
+// always @(posedge clk)
+// begin
+//     if(reg_write)
+//         $display("RF: reg_write=%b write_data=%h",
+//                  reg_write,
+//                  write_data);
+//                  $display(
+//             "read_sel1=%0d read_data1=%0d read_sel2=%0d read_data2=%0d",
+//             read_sel1,
+//             read_data1,
+//             read_sel2,
+//             read_data2
+//             );
+// end
+
+
+
 endmodule

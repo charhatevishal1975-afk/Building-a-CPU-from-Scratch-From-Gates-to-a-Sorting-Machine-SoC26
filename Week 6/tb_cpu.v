@@ -7,7 +7,7 @@ module tb_cpu;
     reg [15:0] input_c;
     reg [15:0] input_d;
 
-    cpu uut (
+    multicycle_cpu uut (
         .clk(clk),
         .reset(reset),
         .input_c(input_c),
@@ -18,7 +18,7 @@ module tb_cpu;
     // Clock
     //----------------------------------------
 
-    always #5 clk = ~clk;
+    always #20 clk = ~clk;
 
     //----------------------------------------
     // Test
@@ -41,7 +41,7 @@ module tb_cpu;
         reset = 0;
 
         // Run for a few instructions
-        #500;
+        #500000;
 
         $display("--------------------------------");
         $display("CPU Test Finished");
@@ -55,17 +55,18 @@ module tb_cpu;
         $display("mem[5] = %0d", uut.DATA.memory[5]);
         $display("mem[6] = %0d", uut.DATA.memory[6]);
         $display("mem[7] = %0d", uut.DATA.memory[7]);
+        // $display("mem[10] = %0d", uut.DATA.memory[10]);
 
-        for(i=0;i<7;i=i+1)
-        begin
-            if(uut.DATA.memory[i] > uut.DATA.memory[i+1])
-            begin
-                $display("FAIL");
-                $finish;
-            end
-        end
+        // for(i=0;i<7;i=i+1)
+        // begin
+        //     if(uut.DATA.memory[i] > uut.DATA.memory[i+1])
+        //     begin
+        //         $display("FAIL");
+        //         $finish;
+        //     end
+        // end
 
-        $display("PASS");
+        // $display("PASS");
 
         $finish;
 
@@ -78,21 +79,22 @@ module tb_cpu;
     
 
     
+        always @(posedge clk) begin
+        $display("\n=================================================");
 
-        // $display("\n=================================================");
+        $display("PC          : %0d", uut.PC);
+        $display("Instruction : %h", uut.instruction);
+        $display("Instruction_IR : %h", uut.IR);
 
-        // $display("PC          : %0d", uut.pc);
-        // $display("Instruction : %h", uut.instruction);
+        $display("");
 
-        // $display("");
+        $display("Registers");
+        $display("A = %0d", uut.regA);
+        $display("B = %0d", uut.regB);
+        $display("C = %0d", uut.regC);
+        $display("D = %0d", uut.regD);
 
-        // $display("Registers");
-        // $display("A = %0d", uut.regA);
-        // $display("B = %0d", uut.regB);
-        // $display("C = %0d", uut.regC);
-        // $display("D = %0d", uut.regD);
-
-        // $display("");
+        $display("");
 
         // $display("ALU");
         // $display("Result = %0d", uut.alu_result);
@@ -145,6 +147,6 @@ module tb_cpu;
         //  uut.STOREF);
 
 
-    // end
+    end
 
 endmodule

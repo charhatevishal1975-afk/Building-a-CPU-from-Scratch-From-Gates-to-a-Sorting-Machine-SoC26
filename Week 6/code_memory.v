@@ -34,4 +34,11 @@ module code_memory(
 
     assign instruction = memory[address];
 
+    // always @(*)
+    // $display(
+    //     "CODEMEM address=%0d instruction=%h",
+    //     address,
+    //     instruction
+    // );
+
 endmodule

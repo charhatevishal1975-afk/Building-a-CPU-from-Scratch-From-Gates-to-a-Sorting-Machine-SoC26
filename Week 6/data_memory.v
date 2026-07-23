@@ -31,14 +31,6 @@ module data_memory(
     for(i=0;i<256;i=i+1)
         memory[i]=0;
 
-    memory[0] = 5;
-    memory[1] = 2;
-    memory[2] = 8;
-    memory[3] = 3;
-    memory[4] = 9;
-    memory[5] = 11;
-    memory[6] = 1;
-    memory[7] = 4;
 end
 
     //------------------------------------------------
@@ -63,6 +55,14 @@ end
 
 // always @(*) begin
 //     $display("READ addr=%0d data=%0d", address, read_data);
+// end
+// always @(*) begin
+//     $display(
+//         "DATA MEM: addr=%0d mem[addr]=%0d read_data=%0d",
+//         address,
+//         memory[address],
+//         read_data
+//     );
 // end
 
 endmodule

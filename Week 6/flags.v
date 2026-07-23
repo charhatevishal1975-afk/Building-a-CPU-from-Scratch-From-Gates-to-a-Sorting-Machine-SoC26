@@ -53,4 +53,24 @@ begin
 
 end
 
+always @(posedge clk)
+begin
+    if(flag_write)
+        $display(
+            "FLAGS WRITE Z=%b C=%b N=%b",
+            zero_in,
+            carry_in,
+            negative_in
+        );
+end
+always @(posedge clk)
+begin
+    $display(
+        "FLAGS REG Z=%b C=%b N=%b",
+        zero,
+        carry,
+        negative
+    );
+end
+
 endmodule

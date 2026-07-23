@@ -1,5 +1,9 @@
 `timescale 1ns / 1ps
 
+`define RED    "\033[31m"
+`define GREEN  "\033[32m"
+`define RESET  "\033[0m"
+
 module tb_cpu;
 
     reg clk;
@@ -60,12 +64,12 @@ module tb_cpu;
         begin
             if(uut.DATA.memory[i] > uut.DATA.memory[i+1])
             begin
-                $display("FAIL");
+                $display("%sFAIL%s", `RED, `RESET);
                 $finish;
             end
         end
 
-        $display("PASS");
+        $display("%sPASS%s",`GREEN, `RESET);
 
         $finish;
 

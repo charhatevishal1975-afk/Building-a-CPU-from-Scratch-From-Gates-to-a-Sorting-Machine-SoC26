@@ -1,4 +1,3 @@
-// unsorted array
 91
 13
 248
