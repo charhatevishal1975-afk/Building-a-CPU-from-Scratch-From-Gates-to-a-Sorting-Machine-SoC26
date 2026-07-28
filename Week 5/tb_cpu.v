@@ -45,22 +45,28 @@ module tb_cpu;
         reset = 0;
 
         // Run for a few instructions
-        #50000;
+        #200000;
 
         $display("--------------------------------");
         $display("CPU Test Finished");
         $display("--------------------------------");
         $display("\nFinal Data Memory");
-        $display("mem[0] = %0d", uut.DATA.memory[0]);
-        $display("mem[1] = %0d", uut.DATA.memory[1]);
-        $display("mem[2] = %0d", uut.DATA.memory[2]);
-        $display("mem[3] = %0d", uut.DATA.memory[3]);
-        $display("mem[4] = %0d", uut.DATA.memory[4]);
-        $display("mem[5] = %0d", uut.DATA.memory[5]);
-        $display("mem[6] = %0d", uut.DATA.memory[6]);
-        $display("mem[7] = %0d", uut.DATA.memory[7]);
+        // $display("mem[0] = %0d", uut.DATA.memory[0]);
+        // $display("mem[1] = %0d", uut.DATA.memory[1]);
+        // $display("mem[2] = %0d", uut.DATA.memory[2]);
+        // $display("mem[3] = %0d", uut.DATA.memory[3]);
+        // $display("mem[4] = %0d", uut.DATA.memory[4]);
+        // $display("mem[5] = %0d", uut.DATA.memory[5]);
+        // $display("mem[6] = %0d", uut.DATA.memory[6]);
+        // $display("mem[7] = %0d", uut.DATA.memory[7]);
 
-        for(i=0;i<7;i=i+1)
+        for(i=0;i<40;i=i+1)
+        begin
+            $display("mem[%0d] = %0d", i, uut.DATA.memory[i]);     
+
+        end
+
+        for(i=0;i<40;i=i+1)
         begin
             if(uut.DATA.memory[i] > uut.DATA.memory[i+1])
             begin
@@ -79,31 +85,31 @@ module tb_cpu;
     // Monitor CPU State
     //----------------------------------------
 
-    reg tmp;
-    initial begin
-        tmp<= 0;
-    end
-    always @(posedge clk) begin
+    // reg tmp;
+    // initial begin
+    //     tmp<= 0;
+    // end
+    // always @(posedge clk) begin
 
-        if(!uut.instruction)
-            tmp <= 1;
+    //     if(!uut.instruction)
+    //         tmp <= 1;
 
 
         
-        if (!tmp) begin
+    //     if (!tmp) begin
 
-        $display("\n=================================================");
+    //     $display("\n=================================================");
 
-        $display("PC          : %0d", uut.pc);
-        $display("Instruction : %h", uut.instruction);
+    //     $display("PC          : %0d", uut.pc);
+    //     $display("Instruction : %h", uut.instruction);
 
-        $display("");
+    //     $display("");
 
-        $display("Registers");
-        $display("A = %0d", uut.regA);
-        $display("B = %0d", uut.regB);
-        $display("C = %0d", uut.regC);
-        $display("D = %0d", uut.regD);
+    //     $display("Registers");
+    //     $display("A = %0d", uut.regA);
+    //     $display("B = %0d", uut.regB);
+    //     $display("C = %0d", uut.regC);
+    //     $display("D = %0d", uut.regD);
 
         // $display("");
 
@@ -112,11 +118,11 @@ module tb_cpu;
 
         // $display("");
 
-        $display("Flags");
-        $display("Zero=%b Carry=%b Negative=%b",
-                 uut.zero_flag,
-                 uut.carry_flag,
-                 uut.negative_flag);
+        // $display("Flags");
+        // $display("Zero=%b Carry=%b Negative=%b",
+                //  uut.zero_flag,
+                //  uut.carry_flag,
+                //  uut.negative_flag);
         // $display("Instruction : %h", uut.instruction);                 
         // $display("reg_write  = %b", uut.reg_write);
         // $display("write_sel  = %0d", uut.write_sel);
@@ -157,7 +163,7 @@ module tb_cpu;
         //  uut.STORE,
         //  uut.STOREF);
 
-        end
-    end
+    //     end
+    // end
 
 endmodule

@@ -1,25 +1,25 @@
 # ============================================
-# Bubble Sort (8 Elements)
+# Bubble Sort
 # ============================================
 
         LOADI A,0          # i = 0
 
 OUTER:
 
-        LOADI D,7          # last = 7
+        LOADI D,40          # last = 40
 
         LOADI B,0          # j = 0
 
         CMP A,D
-        BRGE END           # if i>=7 finish
+        BRGE END           # if i>=40 finish
 
 INNER:
 
-        LOADI D,7
-        SUB D,D,A          # D = 7-i
+        LOADI D,40
+        SUB D,D,A          # D = 40-i
 
         CMP B,D
-        BRGE NEXT_I        # if j>=7-i
+        BRGE NEXT_I        # if j>=40-i
 
         #-------------------------
         # C = array[j]

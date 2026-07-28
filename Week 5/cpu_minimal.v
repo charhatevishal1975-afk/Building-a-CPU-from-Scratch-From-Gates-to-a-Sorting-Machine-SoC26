@@ -253,42 +253,42 @@ end
     // Debug Display
     //------------------------------------------------
 
-    always @(posedge clk)
-begin
-    $display("-------------------------------------------");
-$display("PC          : %0d", current_pc);
-$display("Instruction : %h", instruction);
+//     always @(posedge clk)
+// begin
+//     $display("-------------------------------------------");
+// $display("PC          : %0d", current_pc);
+// $display("Instruction : %h", instruction);
 
-$display("Opcode      : %h", instruction[15:12]);
+// $display("Opcode      : %h", instruction[15:12]);
 
-$display("Immediate   : %0d", immediate);
+// $display("Immediate   : %0d", immediate);
 
-$display("");
+// $display("");
 
-$display("Registers");
+// $display("Registers");
 
-$display("ALU");
+// $display("ALU");
 
-$display("A Input     : %0d", reg_data1);
-$display("B Input     : %0d", reg_data2);
-$display("ALU Result  : %0d", alu_result);
+// $display("A Input     : %0d", reg_data1);
+// $display("B Input     : %0d", reg_data2);
+// $display("ALU Result  : %0d", alu_result);
 
-$display("");
+// $display("");
 
-$display("Registers");
+// $display("Registers");
 
-$display("A = %0d", regA);
-$display("B = %0d", regB);
-$display("C = %0d", regC);
-$display("D = %0d", regD);
-$display("ALU Result : %0d", alu_result);
-$display("");
+// $display("A = %0d", regA);
+// $display("B = %0d", regB);
+// $display("C = %0d", regC);
+// $display("D = %0d", regD);
+// $display("ALU Result : %0d", alu_result);
+// $display("");
 
-$display("Flags");
+// $display("Flags");
 
-$display("Z = %0d", zero_flag);
-$display("C = %0d", carry_flag);
-$display("N = %0d", negative_flag);
-end
+// $display("Z = %0d", zero_flag);
+// $display("C = %0d", carry_flag);
+// $display("N = %0d", negative_flag);
+// end
 
 endmodule
