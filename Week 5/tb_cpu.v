@@ -89,18 +89,18 @@ module tb_cpu;
     // initial begin
     //     tmp<= 0;
     // end
-    // always @(posedge clk) begin
+    always @(posedge clk) begin
 
-    //     if(!uut.instruction)
-    //         tmp <= 1;
+        // if(!uut.instruction)
+        //     tmp <= 1;
 
 
         
-    //     if (!tmp) begin
+        // if (!tmp) begin
 
     //     $display("\n=================================================");
 
-    //     $display("PC          : %0d", uut.pc);
+        $display("PC          : %0d", uut.pc);
     //     $display("Instruction : %h", uut.instruction);
 
     //     $display("");
@@ -163,7 +163,7 @@ module tb_cpu;
         //  uut.STORE,
         //  uut.STOREF);
 
-    //     end
+        end
     // end
 
 endmodule
