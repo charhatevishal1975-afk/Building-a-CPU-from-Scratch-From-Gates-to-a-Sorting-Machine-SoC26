@@ -430,33 +430,33 @@ assign branch_taken =
 
         (BRGE && !carry_flag);
 
-always @(posedge clk)
-begin
-    if(MDR_en)
-        $display("MDR LOAD d=%0d", memory_data);
-end
+// always @(posedge clk)
+// begin
+//     if(MDR_en)
+//         $display("MDR LOAD d=%0d", memory_data);
+// end
 
-always @(*) begin
-    $display(
-        "LOADF=%b STOREF=%b B_reg=%0d EA=%0d ALUOut=%0d addr=%0d",
-        LOADF,
-        STOREF,
-        B_reg,
-        effective_address,
-        ALUOut,
-        (LOADF || STOREF) ? effective_address : ALUOut
-    );
-end
+// always @(*) begin
+//     $display(
+//         "LOADF=%b STOREF=%b B_reg=%0d EA=%0d ALUOut=%0d addr=%0d",
+//         LOADF,
+//         STOREF,
+//         B_reg,
+//         effective_address,
+//         ALUOut,
+//         (LOADF || STOREF) ? effective_address : ALUOut
+//     );
+// end
 
-always @(*) begin
-    $display(
-        "LOADF=%b rf_read_sel2=%0d reg_data2=%0d B_reg=%0d",
-        LOADF,
-        rf_read_sel2,
-        reg_data2,
-        B_reg
-    );
-end
+// always @(*) begin
+//     $display(
+//         "LOADF=%b rf_read_sel2=%0d reg_data2=%0d B_reg=%0d",
+//         LOADF,
+//         rf_read_sel2,
+//         reg_data2,
+//         B_reg
+//     );
+// end
 
 // always@(posedge clk) begin
 //     $display(

@@ -142,7 +142,7 @@ always @(*) begin
     DECODE:
     begin
         A_en = 1;
-       if (!(opcode == 4'b1001))
+    //    if (!(opcode == 4'b1001))
         B_en = 1;
     end
 
@@ -258,12 +258,12 @@ always @(*) begin
 
 end
 
-always@(posedge clk) begin
-    $display(
-            "state=%0d",
-            state
-        );
-end
+// always@(posedge clk) begin
+//     $display(
+//             "state=%0d",
+//             state
+//         );
+// end
 
 
 

@@ -1,22 +1,22 @@
-#--------------------------------------
-# Increment every array element
-#--------------------------------------
+LOADI B,0
 
-LOADI A,0          # index = 0
-LOADI B,8          # array size
+LOADF C,B,0
 
-LOOP:
+ADDI B,B,1
+LOADF D,B,0
 
-LOADF C,A,0        # C = memory[A]
+SUBI B,B,1
 
-ADDI C,C,1         # C++
+CMP D,C
+BRGE NO_SWAP
 
-STOREF C,A,0       # memory[A] = C
+STOREF D,B,0
 
-ADDI A,A,1         # index++
+ADDI B,B,1
+STOREF C,B,0
 
-CMP A,B
+SUBI B,B,1
 
-BRNE LOOP
+NO_SWAP:
 
 NOOP
